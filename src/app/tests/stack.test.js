@@ -31,5 +31,4 @@ describe("My stack", () => {
     expect(stack.peek).toBe('1');
   });
 
-  return;
 });
