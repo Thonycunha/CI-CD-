@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watchAll"
+    "test": "CI=true jest --watchAll"
   },
   "dependencies": {
     "next": "14.0.3",
