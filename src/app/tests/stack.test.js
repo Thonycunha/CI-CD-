@@ -30,4 +30,6 @@ describe("My stack", () => {
     expect(stack.top).toBe(0);
     expect(stack.peek).toBe('1');
   });
+
+  return;
 });
