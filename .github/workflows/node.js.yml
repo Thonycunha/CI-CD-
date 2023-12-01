@@ -32,10 +32,5 @@ jobs:
         rm -rf node_modules
         npm install
 
-    - name: Build (if present)
-      run: | 
-        npm run build --if-present
-        npm start
-
     - name: Run Tests
       run: npm run test
