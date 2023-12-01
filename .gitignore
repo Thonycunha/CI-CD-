@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+
+# Jest
+coverage/
+
+# Arquivos de compilação
+.next/
+
+# Logs
+logs
+*.log
+
+# Arquivos temporários
+*.tmp
+
+# Arquivos de ambiente
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Arquivos de build
+out/
+build/
