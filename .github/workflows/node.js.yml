@@ -30,3 +30,22 @@ jobs:
 
     - name: Run Tests
       run: npm test
+
+    - name: Login no Docker Hub
+      run: docker login -u atecnologia -p Cunha1997@
+
+    - name: Build docker image frontend
+      run: cd frontend && docker build -t atecnologia/frontend .
+    - name: Push image frontend
+      run: docker push atecnologia/frontend
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Pull da image from Docker Hub frontend
+        run: docker pull frontend:latest
+
+      - name: Remove Docker container frontend
+        run: docker rm -f frontend
+
+      - name: Run Docker continer frontend
+        run: docker run -d -p 3000:3000 --name frontend atecnologia/frontend
