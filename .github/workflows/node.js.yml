@@ -30,15 +30,3 @@ jobs:
 
     - name: Run Tests
       run: npm test
-
-  deploy:
-    runs-on: self-hosted
-    steps:
-      - name: Pull da image from Docker Hub frontend
-        run: docker pull frontend:latest
-
-      - name: Remove Docker container frontend
-        run: docker rm -f frontend
-
-      - name: Run Docker continer frontend
-        run: docker run -d -p 3000:3000 --name frontend atecnologia/frontend
